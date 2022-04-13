@@ -1,0 +1,11 @@
+.searchInput{
+    input{
+        margin: 2rem;
+        width: 80%;
+        height: 45px;
+        color: black;
+        outline: 0;
+    }::placeholder{
+        text-align: center;
+    }
+}
