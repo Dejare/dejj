@@ -36,7 +36,7 @@ const giif = () => {
     <>
     <div className='home'>
             <header className='header'>
-            <div className='logo'>GIFZONE</div>
+            <div className='logo'>G!Z</div>
             <div className='nav'>
                 <div></div>
                 <div></div>
@@ -44,10 +44,10 @@ const giif = () => {
             </div>
         </header>
         <div className='hero'>
-            <h1>GIF ZONE!</h1>
+            <h1>GIF <span>Zone!</span></h1>
             <p>Use cool stickers and GIF</p>
             <Search/>
-            <h2>Trending !</h2>
+            {/* <h2>Trending !</h2> */}
             <div className='btnHolder'>
             <div className='btn'>
        {Active ? <button onClick={giif} style={{background: "crimson"}}>

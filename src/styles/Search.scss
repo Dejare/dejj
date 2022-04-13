@@ -1,10 +1,16 @@
 .searchInput{
     input{
-        margin: 2rem;
-        width: 80%;
+        margin: 1rem 2rem;
+        width: 65%;
         height: 45px;
         color: black;
+        text-align: center;
         outline: 0;
+        @media (min-width: 800px) {
+            width: 30%;
+            margin: 2rem;
+            text-align: center;
+        }
     }::placeholder{
         text-align: center;
     }
