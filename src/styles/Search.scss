@@ -1,4 +1,8 @@
 .searchInput{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     input{
         margin: 1rem 2rem;
         width: 65%;
@@ -13,5 +17,12 @@
         }
     }::placeholder{
         text-align: center;
+    }
+    button{
+        background-color: #eff1f3;
+        color: black;
+        border: none;
+        padding: .5rem 1rem;
+        margin: 1re 0rem;
     }
 }

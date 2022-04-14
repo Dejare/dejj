@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Search from './components/Search'
 import Trendsticker from './components/Trendsticker';
 import Gifcard from './components/Gifcard';
+import SearchResults from './components/SearchResults';
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
        </Route>
        <Route exact path = "/sticker">
          <Trendsticker />
+       </Route>
+       <Route exact path="/results">
+         <SearchResults />
        </Route>
      </Switch>
    </Router>
