@@ -11,6 +11,7 @@ import Dashboard from "./afterSignIn/dashboard/Dashboard";
 import { BrowserRouter } from "react-router-dom";
 import Aboutproject from "./afterSignIn/project/Aboutproject";
 import New from "./afterSignIn/project/New";
+import Protectedroutes from "./auth/Protectedroutes";
 
 function App() {
     return (
@@ -32,7 +33,10 @@ function App() {
                 <Verify />
                </Route>
                <Route exact={true} path="/dashboard">
-                <Dashboard />
+                   <Protectedroutes>
+                   <Dashboard />
+                   </Protectedroutes>
+              
                </Route>
                <Route path="/project">
                    <Project/>

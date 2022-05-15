@@ -8,8 +8,9 @@ const RegisterInput = (props) => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [Username, setUsername] = useState("");
+    const [displayName, setUsername] = useState("");
     const [Error, setError] = useState("")
+
 
 const history = useHistory()
     const{ createUser }= UserAuth()
@@ -22,7 +23,7 @@ function dash() {
     const handleSubmit = async (e)=> {
         e.preventDefault()
         try {
-            await createUser(email, password)
+            await createUser(email, password, displayName)
             dash()
         } catch (e) {
             setError(e.message)
@@ -48,7 +49,7 @@ function dash() {
                     className="w-3/4 md:w-2/4 h-10 m-auto bg-gray-200 p-8 mt-8 rounded-lg focus:ring-2"
                     type="text"
                     placeholder="Username..."
-                    value={Username}
+                    value={displayName}
                     onChange={(e) => setUsername(e.target.value)}
                 />
                 <input
