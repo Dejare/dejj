@@ -19,33 +19,15 @@ function dash() {
 
 }
 
-const actionCodeSettings = {
-    // URL you want to redirect back to. The domain (www.example.com) for this
-    // URL must be in the authorized domains list in the Firebase Console.
-    url: 'https://yoursite-dejare.vercel.app/dashboard',
-    // This must be true.
-    handleCodeInApp: true,
-    iOS: {
-      bundleId: 'com.example.ios'
-    },
-    android: {
-      packageName: 'com.example.android',
-      installApp: true,
-      minimumVersion: '12'
-    }
-  };
     const handleSubmit = async (e)=> {
         e.preventDefault()
         try {
             await createUser(email, password)
-            .then((userCredentials)=> {
-                    userCredentials.user.sendEmailVerification();
-                    alert("Verify email")
-            });
             dash()
         } catch (e) {
             setError(e.message)
-            console.log(e.message)    
+            console.log(e.message)
+            alert(e.message)    
         }
     }
 

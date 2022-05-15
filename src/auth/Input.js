@@ -1,19 +1,39 @@
 import React, {useState} from "react";
 import { useHistory } from "react-router-dom";
-
+import { UserAuth } from '../context/AuthContext';
 // import {AiFillGoogleCircle} from 'react-icons/ai'
 export const Input = (props) => {
-    function handleSubmit(e) {
-        e.preventDefault();
 
-       const data = {
-            email: Email,
-            pw: Password
+    const [Error, setError] = useState("")
+
+const {login} = UserAuth()
+
+    function dash() {
+        history.push("/dashboard");
+        window.location.reload()
+    
+    }
+
+    const handleSubmit = async (e)=> {
+        e.preventDefault()
+        try {
+            await login(email, password)
+            dash()
+        } catch (e) {
+            setError(e.message)
+            console.log(e.message)
+            alert(e.message)    
+        }
+
+        const data = {
+            email: email,
+            pw: password
         }
         props.onAddData(data)
     }
-    const [Email, setEmail] = useState("");
-    const [Password, setPassword] = useState("");
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
     const history = useHistory()
     function registerPage(e) {
@@ -29,14 +49,14 @@ export const Input = (props) => {
                     className="w-3/4 md:w-2/4 h-10 m-auto bg-gray-200 p-8 mt-8 rounded-lg focus:ring-2"
                     type="email"
                     placeholder="Email..."
-                    value={Email}
+                    value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
                     className="w-3/4 md:w-2/4  h-10 m-auto bg-gray-200 p-8 mt-8 rounded-lg focus:ring-2"
                     type="password"
                     placeholder="Password..."
-                    value={Password}
+                    value={password}
                     onChange={(e)=> setPassword(e.target.value)}
                 />
 
