@@ -7,7 +7,7 @@ const Dashboard = () => {
   return (
     <div className='dashboard flex flex-row'>
     
-      <div className='dashboard_left bg-blue-600 flex flex-col'>
+      <div className='dashboard_left bg-blue-600 flex-col hidden md:flex'>
         <Left/>
       </div>
       <div className='center'>

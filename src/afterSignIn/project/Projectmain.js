@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { Link ,useHistory } from "react-router-dom";
 import CenterCards from "../dashboard/CenterCards";
 import Aboutproject from "./Aboutproject";
+import {HiMenuAlt3} from 'react-icons/hi'
 
 import Projectcard from "./Projectcard";
 
@@ -26,22 +27,30 @@ const Projectmain = () => {
         setLoad(true);
     };
     return (
-        <div>
+        <div className="w-screen">
             {/* {Noproject ? } */}
+            <header className="text-blue-600 p-12 flex flex-row justify-between w-screen">
+                <div>
+                    Yoursite!
+                </div>
+                <div>
+                    <HiMenuAlt3/>
+                </div>
+            </header>
 
-            <div className="m-12 mt-52" ref={newProject}>
-                <h1 className="text-5xl coolvetica m-12">
+            <div className="md:m-12 m-4 mt-20 md:mt-52" ref={newProject}>
+                <h1 className="text-5xl coolvetica md:m-12 m-4">
                     New Project <br /> <span className="coolvetica"></span>
                 </h1>
-                <h1 className="m-12 text-5xl mb-4 coolvetica text-blue-600">
+                <h1 className="m-12 ml-4 text-5xl mb-4 coolvetica text-blue-600">
                     Tell us a little about yourself / project
                 </h1>
-                <p className="ml-12 mb-12">
+                <p className="md:ml-12 ml-4 mb-12">
                     We use this to tailor your site according to your
                     information.
                 </p>
                 <button
-                    className="cta rounded-xl text-white bg-blue-600 ml-12"
+                    className="cta rounded-xl text-white bg-blue-600 md:ml-12 ml-4"
                     onClick={startProject}
                 >
                     Start&rarr;
@@ -52,10 +61,10 @@ const Projectmain = () => {
                 {" "}
                 {start ? (
                     <>
-                        <h1 className="m-24 capitalize m-24 text-5xl mb-4 coolvetica text-blue-600">
+                        <h1 className="md:m-24 m-8 capitalize m-24 text-5xl mb-4 coolvetica text-blue-600">
                             You have no new Projects Currrently
                         </h1>
-                        <div className="m-24">
+                        <div className="md:m-24 m-8">
                             <Projectcard
                                 num="0"
                                 projectProgress="0%"

@@ -1,5 +1,5 @@
 import React from 'react'
-import {HiSearch} from 'react-icons/hi'
+// import {HiSearch} from 'react-icons/hi'
 import {AiOutlineSetting, AiOutlineBell, AiOutlinePlus} from 'react-icons/ai'
 import { UserAuth } from "../../context/AuthContext";
 import CenterCards from './CenterCards';
@@ -14,7 +14,7 @@ const Center = () => {
       <>
     <div className='flex flex-row justify-between'>
         <div className='flex flex-row'>
-              <input type="search" className='dashboard_input rounded-xl focus:ring-1' placeholder="Search templates.."/>
+              <input type="search" className='dashboard_input rounded-xl focus:ring-1 hidden md:block' placeholder="Search templates.."/>
         </div>
         <div className='flex flex-row m-12'>
             <AiOutlineBell className='mr-8 text-3xl text-gray-600'/>

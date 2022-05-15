@@ -6,7 +6,7 @@ const Project = () => {
   return (
     <div className='dashboard flex flex-row'>
     
-    <div className='dashboard_left bg-blue-600 flex flex-col'>
+    <div className='dashboard_left bg-blue-600 md:flex flex-col hidden '>
       <Left/>
     </div>
     <div className='center'>

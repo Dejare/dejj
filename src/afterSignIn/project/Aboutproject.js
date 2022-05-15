@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useHistory } from "react-router-dom";
 import Left from "../dashboard/Left";
+import {HiMenuAlt3} from 'react-icons/hi'
 
 const Aboutproject = (props, { display }) => {
     const history = useHistory();
@@ -29,23 +30,31 @@ const Aboutproject = (props, { display }) => {
     const formData = useRef();
     return (
         <div className="dashboard flex flex-row">
-            <div className="dashboard_left bg-blue-600 flex flex-col">
+            <div className="dashboard_left bg-blue-600 md:flex hidden flex-col">
                 <Left />
             </div>
             <div className="center">
-                <div className="m-24" ref={formData}>
+            <header className="text-blue-600 p-12 flex flex-row justify-between w-screen">
+                <div>
+                    Yoursite!
+                </div>
+                <div>
+                    <HiMenuAlt3/>
+                </div>
+            </header>
+                <div className="md:m-24 m-4" ref={formData}>
                     <div>
-                        <h1 className="m-12 text-5xl mb-4 coolvetica text-blue-600">
+                        <h1 className="md:m-12 m-4 text-5xl mb-4 coolvetica text-blue-600">
                             Project form
                         </h1>
-                        <p className="ml-12 mb-12">
+                        <p className="md:ml-12 m-4 md:mb-12 mb-4">
                             Please fill this exactly how you'd like it to be on
                             your website.
                         </p>
                     </div>
                     <form
                         onSubmit={handleSubmit}
-                        className="flex flex-col ml-12"
+                        className="flex flex-col md:ml-12 ml-2"
                     >
                         <div>
                             <h1>Project Name / Site Name</h1>
@@ -53,7 +62,7 @@ const Aboutproject = (props, { display }) => {
                                 type="text"
                                 onChange={(e) => setProjectname(e.target.value)}
                                 value={Projectname}
-                                className="uppercase w-3/4 md:w-2/4 h-10 ml-8 mt-0 bg-gray-200 p-8 mt-8 rounded-lg focus:ring-2"
+                                className="uppercase w-4/4 md:w-2/4 h-10 ml-8 mt-0 bg-gray-200 p-8 mt-8 rounded-lg focus:ring-2"
                                 required
                             />
                         </div>
@@ -64,7 +73,7 @@ const Aboutproject = (props, { display }) => {
                                 required
                                 onChange={(e) => setfullname(e.target.value)}
                                 value={fullname}
-                                className="w-3/4 md:w-2/4 h-10 ml-8 mt-0 bg-gray-200 p-8 mt-8 rounded-lg focus:ring-2"
+                                className="w-4/4 md:w-2/4 h-10 ml-8 mt-0 bg-gray-200 p-8 mt-8 rounded-lg focus:ring-2"
                             />
                         </div>
                         <div>
@@ -74,7 +83,7 @@ const Aboutproject = (props, { display }) => {
                                 required
                                 onChange={(e) => setlocation(e.target.value)}
                                 value={location}
-                                className="w-3/4 md:w-2/4 h-10 ml-8 mt-0 bg-gray-200 p-8 mt-8 rounded-lg focus:ring-2"
+                                className="w-4/4 md:w-2/4 h-10 ml-8 mt-0 bg-gray-200 p-8 mt-8 rounded-lg focus:ring-2"
                             />
                         </div>
                         <div>
@@ -84,7 +93,7 @@ const Aboutproject = (props, { display }) => {
                                 onChange={(e) => setoccupation(e.target.value)}
                                 value={occupation}
                                 required
-                                className="w-3/4 md:w-2/4 h-10 ml-8 mt-0 bg-gray-200 p-8 mt-8 rounded-lg focus:ring-2"
+                                className="w-4/4 md:w-2/4 h-10 ml-8 mt-0 bg-gray-200 p-8 mt-8 rounded-lg focus:ring-2"
                             />
                         </div>
                         <div>
@@ -94,7 +103,7 @@ const Aboutproject = (props, { display }) => {
                                 onChange={(e) => setskills(e.target.value)}
                                 value={skills}
                                 required
-                                className="w-3/4 md:w-2/4 h-10 ml-8 ml-8 bg-gray-200 p-8 mt-8 rounded-lg focus:ring-2"
+                                className="w-4/4 md:w-2/4 h-10 ml-8 ml-8 bg-gray-200 p-8 mt-8 rounded-lg focus:ring-2"
                             />
                         </div>
                         <div>
@@ -105,14 +114,14 @@ const Aboutproject = (props, { display }) => {
                                 id=""
                                 cols="30"
                                 rows="10"
-                                className="w-3/4 h-1/4 md:w-2/4 h-80 ml-8 mt-0 bg-gray-200 p-8 mt-8 rounded-lg focus:ring-2"
+                                className="w-4/4 h-1/4 md:w-2/4 h-80 ml-8 mt-0 bg-gray-200 p-8 mt-8 rounded-lg focus:ring-2"
                                 onChange={(e) => setabout(e.target.value)}
                                 value={about}
                             ></textarea>
                         </div>
                         <button
                             type="submit"
-                            className="cta bg-blue-600 text-white flex w-1/4 m-12 rounded-xl"
+                            className="cta bg-blue-600 text-white flex md:w-1/4 w-3/4 m-12 rounded-xl"
                         >
                             Create Site.
                         </button>
