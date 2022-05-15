@@ -1,0 +1,12 @@
+.hero{
+    top: 23%;
+    @media screen and (min-width: 800px) {
+        top: 33%;
+    }
+}
+.home{
+    button{
+        padding: 1rem 1.5rem;
+
+    }
+}

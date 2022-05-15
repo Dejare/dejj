@@ -1,0 +1,318 @@
+@font-face {
+    font-family: 'Calibre-Medium';
+    src:url('../font/Calibre-Medium.woff') format('woff'),
+        url('../font/Calibre-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Coolvetica";
+    src: url("../font/coolvetica\ rg.ttf") format("truetype");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "cool";
+    src: url("../font/coolvetica crammed rg.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Mark Pro';
+    src: url('../font/MarkPro-Heavy.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Circular Std";
+    src: url('../font/CircularStd-Book.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Calibre-Regular';
+    src:url('../font/Calibre-Regular.woff') format('woff'),
+        url('../font/Calibre-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*--------------------------
+    variables
+---------------------------*/
+
+//fonts
+$primary-font: 'Calibre-Regular', sans-serif;
+$secondary-font: 'Calibre-SemiBold', sans-serif;
+$tertiary-font: 'Calibre-Medium', sans-serif;
+$stylefont: "Mark Pro";
+$circular: "Circular Std";
+$coolvetica: "Coolvetica";
+$cool: "cool";
+.style{
+    font-family: $stylefont;
+    font-weight: 500;
+
+}
+.circular  {
+    font-family: $circular !important;
+}
+//colors
+$primary-color: #09F755;
+$gray: #797575;
+$white: #eeeeee;
+$black: #000000;
+$blue: #6bc5f8;
+$purple: #cf59e6;
+
+/*--------------------------
+    base settings
+---------------------------*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // border: solid 2px red;
+    // overflow-x: hidden;
+
+}
+input{
+    outline: none !important;
+}
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%; // 10px
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    
+    // @media only screen and (max-width: 62.5em) { // tab-land
+    //     font-size: 56.25%;
+    // }
+    
+    // @media only screen and (max-width: 56.25em) { // tab-port
+    //     font-size: 54%; 
+    // }
+
+    // @media only screen and (max-width: 37.5em) { // phone
+    //     font-size: 51%; 
+    // }
+    
+    // @media only screen and (min-width: 112.5em) { // big desktop
+    //     font-size: 75%; // 1rem = 12px, 12/16 = 75
+    // }
+    
+}
+body {
+    font-family: $primary-font;
+    font-size: 1.7rem;
+    // background-color: $black;
+    color: black;
+    // overflow-x: hidden;
+    // cursor: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    @media only screen and (min-width: 20em) { // big desktop
+        // overflow-x: scroll;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem)) 1fr;
+}
+
+
+section {
+    transition: transform 0.25s;
+    will-change: transform;
+}
+
+// cursor
+
+.cursor {
+    width: 2rem;
+    height: 2rem;
+    border: 2.5px solid $white;
+    border-radius: 50%;
+    position: absolute;
+    top: -10rem;
+    left: -10rem;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transform-origin: 100% 100%;
+    transition: all .3s ease;
+    transition-property: background, transform;
+
+    @media only screen and (max-width: 62.5em) { // tab-land
+        opacity: 0;
+    }
+}
+/*--------------------------
+    typography
+---------------------------*/
+.heading-2 {
+    font-family: $stylefont;
+    font-size: 4rem;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    margin-left: 3rem;
+    background: linear-gradient(
+        -45deg,
+        $blue,
+        $purple,
+        $blue,
+        $purple
+    );
+    margin: 1rem 3rem;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+}
+
+.heading-3 {
+    font-size: 4rem;
+    text-transform: capitalize;
+    letter-spacing: -.5px;
+    line-height: 4rem;
+    font-family: $tertiary-font;
+
+}
+.section-head{
+    margin-left: 3rem;
+    margin-top: 6rem;
+}
+
+.heading-4 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.heading-5 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: $white;
+}
+
+.paragraph {
+    margin-left: 3rem;
+    font-size: 1.5rem;
+    color: $gray;
+}
+
+
+
+/*--------------------------
+    button
+---------------------------*/
+.cta {
+
+    padding: 1.5rem 4rem;
+    text-decoration: none;
+    color: $white;
+    border-radius: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-family: $primary-font;
+    letter-spacing: 3px;
+    border: 1.5px solid $white;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+   
+    &:hover {
+        background: linear-gradient(
+            -45deg,
+            $white, white);
+        border: 1.5px solid $white;
+        color: $black;
+    }
+}
+
+
+/*--------------------------
+    utilities
+---------------------------*/
+.pri-color {
+    color: $primary-color;
+}
+.sec-color {
+    color: $gray;
+}
+.mb-l {
+    margin-bottom: 5rem;
+}
+.mb-m {
+    margin-bottom: 3rem;
+}
+.mb-s {
+    margin-bottom: 1.3rem;
+}
+.mt-s {
+    margin-top: 1rem;
+}
+
+
+// Link
+
+a {
+    text-decoration: none;
+    // padding: 0.4rem 0.8rem;
+    // border: 1px solid white;
+    text-transform: capitalize;
+    position: relative;
+    color: $white;
+}
+// a::before, a::after{
+//     transition: all .5s;
+// }
+// a::after{
+    
+//         position: absolute;
+//         bottom: 0;
+//         left: 0;
+//         right: 0;
+//         margin: auto;
+//         width: 0%;
+//         content: '.';
+//         // color: black;
+//         background: $black;
+//         height: 2px;
+// }
+// a:hover::after{
+//     width: 100%;
+// // }
+
+// /::-webkit-scrollbar{
+//     width: 10px;
+// }
+// ::-webkit-scrollbar-track{
+//     background: #000000;
+// }
+// ::-webkit-scrollbar-thumb{
+//     background:  linear-gradient(
+//         -45deg,
+//         $blue,
+//         $purple,
+//         $blue,
+//         $purple);
+
+.secondary-font{
+    font-family: $secondary-font;
+}
+.coolvetica{
+    font-family: $coolvetica;
+}
