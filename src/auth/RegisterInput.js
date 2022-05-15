@@ -17,7 +17,7 @@ const history = useHistory()
         e.preventDefault()
         try {
             await createUser(email, password)
-            history.push("/main")
+            history.push("/dashboard")
         } catch (e) {
             setError(e.message)
             console.log(e.message)
