@@ -137,9 +137,9 @@ const Home = () => {
                                 src={`http://openweathermap.org/img/wn/${response.weather[0].icon}@4x.png`}
                             />
                         </div>
-                        <div className="text-center">
+                        <div className="text-center md:mb-12 mb-4">
                             <h3>{response.weather[0].main}</h3>
-                            <div className="text-xl text-white text-center flex flex-row align-center justify-center">
+                            <div className="text-xl text-white md:hidden text-center flex flex-row align-center justify-center">
                             <MdOutlineLocationOn />
                             {response.name}, {response.sys.country}
                         </div>
