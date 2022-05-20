@@ -1,0 +1,129 @@
+// LEFT
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // font-family: "";
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    // background: #f4f4f4;
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+    }
+    .left {
+        width: 70vw;
+        height: 100vh;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // align-items: flex-end;
+        @media screen and (max-width: 800px) {
+            height: 100%;
+            width: 100%;
+        }
+        .left_mainWeatherInfo {
+            display: flex;
+            flex-direction: row;
+            h1 {
+                font-size: 8rem;
+                @media screen and (max-width: 800px) {
+                    font-size: 4rem;
+                    padding: 0rem 1rem;
+                }
+            }
+            .left_locationDate {
+                display: flex;
+                text-transform: capitalize;
+                flex-direction: column;
+                // justify-content: flex-end;
+                align-items: flex-start;
+                justify-content: flex-end;
+                padding: 0rem 2rem 1rem 0rem;
+                // align-content: flex-end;
+            }
+            .image {
+                padding: 0rem  0rem 1rem 0rem;
+                display: flex;
+                flex-direction: column;
+                // justify-content: flex-end;
+                align-items: flex-start;
+                justify-content: flex-end;
+                // align-content: flex-end;
+            }
+        }
+    }
+    .right {
+        width: 30vw;
+        height: 100vh;
+        background: #f4f4f47a;
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.7px);
+        -webkit-backdrop-filter: blur(7.7px);
+        border: 1px solid rgba(244, 244, 244, 0.92);
+        @media screen and (max-width: 800px) {
+            width: 100%;
+        }
+    }
+}
+
+// RIGHT
+
+.right {
+    form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        button {
+            padding: 1rem 1.5rem;
+            margin: 2rem;
+        }
+    }
+    input {
+        margin: 2rem;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid black;
+        padding-bottom: 1rem;
+        outline: 0;
+    }
+    input:focus {
+        border-bottom: 1px solid rgb(36, 34, 34);
+    }
+    .locationlist {
+        margin: 1rem 2rem;
+        li {
+            list-style-type: none;
+            margin: 1rem 0rem;
+        }
+    }
+    .weatherdetails {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+        h2 {
+            margin: 1rem 0rem;
+        }
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 1rem 2rem 1rem 0rem;
+        }
+    }
+}
+
+hr {
+    width: 60%;
+    margin: 2rem auto;
+    border: 1px solid black;
+    border-bottom: none;
+}
