@@ -59,7 +59,7 @@ console.log(time)
 
     const response = JSON.parse(localStorage.getItem("data"));
 
-    const imgsrc = `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`
+    // const imgsrc = `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`
 
     return (
         <div className="main">
