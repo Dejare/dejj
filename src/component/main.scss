@@ -1,160 +1,37 @@
-// LEFT
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap');
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // font-family: "";
+    font-family: "Poppins", sans-serif;
 }
-.main {
-    width: 100%;
-    height: 100%;
-    // background: #f4f4f4;
-    background-image: url(../images/bbggg.jpg);
-    background-position: center;
-    background-size: cover;
+html, body{
+    background: #f4f4f4;
+    color: black;
+}
+
+input{
+    background: transparent;
+    outline: 0;
+    border: 1px solid #e7e7e7;
+}
+
+.weatherCard{
+    width: 25%;
+    height: 50vh;
+    background: #181818;
+    color: white;
+}
+.dateCard{
+    width: 100px;
+    height: 60px;
     display: flex;
-    flex-direction: row;
-    @media screen and (max-width: 980px) {
-        flex-direction: column;
-        // height: 200vh;
-    }
-    .left {
-        width: 70vw;
-        height: 100vh;
-        padding: 3rem;
-        display: flex;
-        color: white;
-        flex-direction: column;
-        justify-content: space-between;
-        // align-items: flex-end;
-        @media screen and (max-width: 980px) {
-            height: 100%;
-            width: 100%;
-            padding: 1rem 0rem 1rem 1rem;
-        }
-        .left_mainWeatherInfo {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            padding: 0rem 1rem ;
-            margin: 1rem 0rem;
-            h1 {
-                font-size: 8rem;
-                @media screen and (max-width: 980px) {
-                    font-size: 4rem;
-                    padding: 0rem 1rem 0rem 0rem ;
-                }
-            }
-            .left_locationDate {
-                display: flex;
-                text-transform: capitalize;
-                flex-direction: column;
-                // justify-content: flex-end;
-                align-items: flex-start;
-                justify-content: flex-end;
-                // padding: 0rem 2rem 1rem 1rem;
-                // align-content: flex-end;
-            }
-            .image {
-                img{
-                    width: 60px;
-                }
-                padding: 0rem  0rem 1rem 0rem;
-                display: flex;
-                flex-direction: column;
-                // justify-content: flex-end;
-                align-items: flex-start;
-                justify-content: flex-end;
-                // align-content: flex-end;
-            }
-        }
-    }
-    .right {
-        width: 30vw;
-        height: 100vh;
-        background: #f4f4f47a;
-        // border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(3px);
-        -webkit-backdrop-filter: blur(3px);
-        // border: 1px solid rgba(244, 244, 244, 0.92);
-        @media screen and (max-width: 980px) {
-            width: 100%;
-        }
-    }
-}
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(68, 67, 67);
+    color: white;
+    // padding: 1rem;
 
-// RIGHT
-
-.right {
-    form {
-        display: flex;
-        // flex-direction: row;
-        justify-content: space-around;
-        padding: 0;
-        margin-top: 2rem;
-        @media screen and(max-width: 980px) {
-     
-        }
-    }
-
-    button{
-        padding: 1rem;
-    }
-
-    input {
-
-        padding-bottom: 1rem;
-        border: none;
-        background: transparent;
-        border-bottom: 1px solid black;
-        // padding-bottom: .3rem;
-        outline: 0;
-        // padding: 0rem 0rem !important;
-    }
-    input:focus {
-        border-bottom: 1px solid rgb(36, 34, 34);
-    }
-    input::placeholder{
-        color: rgb(41, 41, 41);
-    }
-    .locationlist {
-        margin: 2rem 2rem 0rem 2rem;
-        li {
-            list-style-type: none;
-            margin: 1rem 0rem;
-        }
-    }
-    .weatherdetails {
-        display: flex;
-        flex-direction: column;
-        margin: 2rem;
-        margin-top: 0rem;
-        margin-bottom: 0;
-        margin-right: 0;
-        @media screen and(max-width: 980px) {
-            padding: 2rem;
-            margin: 0;
-        }
-        h2 {
-            margin: 1rem 0rem;
-            margin-top: 0rem;
-        }
-        div {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin: 1rem 2rem .6rem 0rem;
-            @media screen and(max-width: 980px) {
-                margin: 1rem 0rem 1rem 0rem;
-            }
-        }
-    }
-}
-
-hr {
-    width: 60%;
-    margin: 2rem auto;
-    border: 1px solid black;
-    border-bottom: none;
 }
