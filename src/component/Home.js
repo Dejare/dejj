@@ -22,6 +22,7 @@ const Home = () => {
                 .then((res) => {
                     localStorage.setItem("data", JSON.stringify(res.data));
                     setLoading(false)
+                    const imgsrc = `http://openweathermap.org/img/wn/${res.data.weather[0].icon}@2x.png`
                 })
                 .catch((err) => {
                     console.log(err);
@@ -62,16 +63,6 @@ const Home = () => {
         }
     };
 // CHANGING BACKGROUND IF ITS SUNNY OR CLOUDY
-useEffect(() => {
-    const weathher = 30;
-
-if (weathher >= 30) {
-    setsunny(false)
-}
-else{
-    setsunny(true)
-}
-}, [])
 
     // getting time and date
     let date = new Date();
@@ -188,7 +179,7 @@ else{
                             </div>
                             <div className="left_locationDate">
                                 <h2>
-                                    {Input}, {response.sys.country}
+                                    {response.name}, {response.sys.country}
                                 </h2>
                                 <p>
                                     {" "}
@@ -198,7 +189,7 @@ else{
                             </div>
                             <div className="image">
                                 {/* image */}
-                                <img src={imgsrc} alt="weather image" />
+                                {/* <img src={imgsrc} alt="weather image" /> */}
                                 <p>{response.weather[0].main}</p>
                             </div>
                         </div>
