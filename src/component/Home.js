@@ -4,6 +4,7 @@ import "./main.scss";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { BiSearchAlt } from "react-icons/bi";
 // import line from '../images/llline.svg'
+import {BallTriangle} from 'react-loader-spinner'
 
 const Home = () => {
     const [Input, setInput] = useState("");
@@ -103,6 +104,9 @@ const Home = () => {
     console.log(time);
 
     const response = JSON.parse(localStorage.getItem("data"));
+    const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
+
+
 
     return (
         <>
@@ -177,9 +181,9 @@ const Home = () => {
                     </div>
                 </div>
             ) : (
-                <div>WAIT SMALL</div>
-            )}
-        </>
+                <div style={style}>
+                <BallTriangle color="#181818" size={100} />     </div>   )}
+        </> 
     );
 };
 
