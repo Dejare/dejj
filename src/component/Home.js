@@ -50,6 +50,7 @@ const Home = () => {
                         console.log(Output);
                         setLoading(false)
                         // const imgsrc = `http://openweathermap.org/img/wn/${res.data.}@2x.png`
+                        const imgsrc = `http://openweathermap.org/img/wn/${res.data.weather[0].icon}@2x.png`
                     })
                     .catch((err) => {
                         console.log(err);
@@ -97,7 +98,7 @@ else{
 
     const response = JSON.parse(localStorage.getItem("data"));
 
-    const imgsrc = `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`
+  
 
     return (
         <>
