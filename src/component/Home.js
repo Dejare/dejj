@@ -5,7 +5,28 @@ import "./main.scss";
 const Home = () => {
     const [Input, setInput] = useState("");
     const [Output, setOutput] = useState("");
-    const APIkey = "595f035757e3560197028500e5259473"
+    const APIkey = "595f035757e3560197028500e5259473";
+
+
+// getting data first by location
+useEffect(() => {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            const lat = position.coords.latitude;
+            const long = position.coords.longitude;
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${APIkey}&units=metric`;
+            axios.get(url).then(res => {
+                localStorage.setItem("data", JSON.stringify(res.data));
+            });
+        })
+    }
+     else {
+        alert("Geolocation is not supported by this browser.");
+    }
+}, [])
+
+
+
     const handleSubmit = (e) => {
         e.preventDefault()
         if (Input === "") {
