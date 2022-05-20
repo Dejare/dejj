@@ -50,6 +50,9 @@
                 // align-content: flex-end;
             }
             .image {
+                img{
+                    width: 60px;
+                }
                 padding: 0rem  0rem 1rem 0rem;
                 display: flex;
                 flex-direction: column;

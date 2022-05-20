@@ -25,10 +25,20 @@ const Home = () => {
         }
     }
 
+    // getting time and date
+    let date = new Date();
+    let time = ((date.getHours().toString()).length>1? date.getHours() : "0"+date.getHours()) +":"+ ((date.getMinutes().toString()).length>1? date.getMinutes() : "0"+date.getMinutes());
 
+    var today = new Date();
+    var todaydate = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    console.log(date)
+// output 2021-7-9
+
+console.log(time)
 
     const response = JSON.parse(localStorage.getItem("data"));
 
+    const imgsrc = `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`
 
     return (
         <div className="main">
@@ -43,15 +53,15 @@ const Home = () => {
                         <h1>{response.main.temp}</h1>
                     </div>
                     <div className="left_locationDate">
-                        <h2>{Input}</h2>
+                        <h2>{Input}, {response.sys.country}</h2>
                         <p>
                             {" "}
-                            {/**date, time */}10:36 Tuesday, 22nd October '19
+                            {/**date, time */}{time}, {todaydate}
                         </p>
                     </div>
                     <div className="image">
                         {/* image */}
-                        <img src="" alt="" />
+                        <img src={imgsrc} alt="weather image" />
                         <p>{response.weather[0].main}</p>
                     </div>
                 </div>
@@ -88,11 +98,11 @@ const Home = () => {
                     </div>
                     <div>
                         <p>Wind</p>
-                        <p>1km/h</p>
+                        <p>{response.wind.speed}m/s</p>
                     </div>
                     <div>
-                        <p>Rain</p>
-                        <p>0mm</p>
+                        <p>Clouds</p>
+                        <p>{response.clouds.all}</p>
                     </div>
                 </div>
                 <hr />
