@@ -1,0 +1,80 @@
+.dashboard{
+    width: 100%;
+    min-height: 100vh;
+}
+
+// LEFT
+
+.dashboard_left{
+    width: 20%;
+    // min-height: 100vh;
+    min-height: 100vh;
+    background: #eeeeee;
+    .leftIcons{
+        // width: 20%;
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translate(-0%, -50%);
+        position: fixed;
+        margin-left: 5rem;
+    }
+}
+
+
+// CENTER
+.center{
+    width: 80% !important;
+    .dashboard_input{
+        background: #eeeeee;
+        padding: 1rem 1.5rem;
+        margin: 2rem;
+    }
+    .cardMain{
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        transform: translate(-10%, -50%);
+        @media screen and (max-width: 900px) {
+            position: relative;
+            top: 30%;
+        }
+    .centerCards{
+        width: 250px;
+        height: 100px;
+        text-align: center;
+    }
+}
+}
+
+
+// project
+
+.savingCardBottom{
+    position: relative;
+    // background: #86dceb;
+    width: 50%;
+    height: 35vh;
+    margin: 2rem;
+    @media screen and (max-width: 780px) {
+        width: 80vw;
+        height: 20vh;;
+        margin: 2rem auto;
+    }
+}
+
+textarea{
+    height: 20vh !important;
+    outline: 0;
+}
+form{
+    h1{
+        margin-left: 2rem;
+    }
+    div{
+        margin-top: 2rem;
+        @media screen and (max-width: 800px) {
+            margin-top: 1rem;
+        }
+    }
+}
