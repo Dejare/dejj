@@ -108,9 +108,9 @@ const Home = () => {
         <>
             {Loading ? (
                 <div className="">
-                    <header className=" w-screen flex flex-row justify-between p-12">
+                    <header className=" w-screen flex md:-row justify-between p-12">
                         <div className="font-light text-xl">The.weather</div>
-                        <div className="text-xl flex flex-row">
+                        <div className="text-xl hidden md:flex flex-row">
                             <MdOutlineLocationOn />
                             {response.name}, {response.sys.country}
                         </div>
@@ -118,7 +118,7 @@ const Home = () => {
                             <form onSubmit={handleSubmit}>
                                 <input
                                     type="text"
-                                    className="rounded-lg px-2 text-center py-2 focus:ring-1"
+                                    className="rounded-lg md:px-2 text-center py-2 focus:ring-1"
                                     placeholder="Search your Location"
                                     onChange={(e) => setInput(e.target.value)}
                                     value={Input}

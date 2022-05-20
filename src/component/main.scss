@@ -22,6 +22,10 @@ input{
     height: 50vh;
     background: #181818;
     color: white;
+    @media screen and(max-width: 600px) {
+        width: 75%;
+        margin: auto;
+    }
 }
 .dateCard{
     width: 100px;
