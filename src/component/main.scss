@@ -35,6 +35,9 @@
         .left_mainWeatherInfo {
             display: flex;
             flex-direction: row;
+            justify-content: space-evenly;
+            padding: 0rem 1rem ;
+            margin: 1rem 0rem;
             h1 {
                 font-size: 8rem;
                 @media screen and (max-width: 980px) {
@@ -49,7 +52,7 @@
                 // justify-content: flex-end;
                 align-items: flex-start;
                 justify-content: flex-end;
-                padding: 0rem 2rem 1rem 1rem;
+                // padding: 0rem 2rem 1rem 1rem;
                 // align-content: flex-end;
             }
             .image {
