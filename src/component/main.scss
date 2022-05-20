@@ -7,36 +7,39 @@
 }
 .main {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     // background: #f4f4f4;
-    background-image: url(../images/bg.jpg);
+    background-image: url(../images/bbggg.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: row;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 980px) {
         flex-direction: column;
+        // height: 200vh;
     }
     .left {
         width: 70vw;
         height: 100vh;
         padding: 3rem;
         display: flex;
+        color: white;
         flex-direction: column;
         justify-content: space-between;
         // align-items: flex-end;
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 980px) {
             height: 100%;
             width: 100%;
+            padding: 1rem 0rem 1rem 1rem;
         }
         .left_mainWeatherInfo {
             display: flex;
             flex-direction: row;
             h1 {
                 font-size: 8rem;
-                @media screen and (max-width: 800px) {
+                @media screen and (max-width: 980px) {
                     font-size: 4rem;
-                    padding: 0rem 1rem;
+                    padding: 0rem 1rem 0rem 0rem ;
                 }
             }
             .left_locationDate {
@@ -67,12 +70,12 @@
         width: 30vw;
         height: 100vh;
         background: #f4f4f47a;
-        border-radius: 16px;
+        // border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(7.7px);
-        -webkit-backdrop-filter: blur(7.7px);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
         border: 1px solid rgba(244, 244, 244, 0.92);
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 980px) {
             width: 100%;
         }
     }
@@ -85,13 +88,21 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        @media screen and(max-width: 980px) {
+            
+        }
         button {
             padding: 1rem 1.5rem;
             margin: 2rem;
+            @media screen and (max-width: 980px) {
+            padding: .1rem 1rem;
+            margin: 0;
+            }
         }
     }
     input {
-        margin: 2rem;
+        padding: 2rem;
+        // margin-left: 2rem;
         background: transparent;
         border: none;
         border-bottom: 1px solid black;
@@ -102,7 +113,7 @@
         border-bottom: 1px solid rgb(36, 34, 34);
     }
     .locationlist {
-        margin: 1rem 2rem;
+        margin: 2rem 2rem;
         li {
             list-style-type: none;
             margin: 1rem 0rem;
@@ -112,6 +123,10 @@
         display: flex;
         flex-direction: column;
         margin: 2rem;
+        @media screen and(max-width: 980px) {
+            padding: 2rem;
+            margin: 0;
+        }
         h2 {
             margin: 1rem 0rem;
         }
@@ -120,6 +135,9 @@
             flex-direction: row;
             justify-content: space-between;
             margin: 1rem 2rem 1rem 0rem;
+            @media screen and(max-width: 980px) {
+                margin: 1rem 0rem 1rem 0rem;
+            }
         }
     }
 }
