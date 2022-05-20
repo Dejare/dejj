@@ -6,6 +6,7 @@ const Home = () => {
     const [Input, setInput] = useState("");
     const [Output, setOutput] = useState("");
     const [Loading, setLoading] = useState(true);
+    const [sunny, setsunny] = useState(false)
     const APIkey = "595f035757e3560197028500e5259473";
 
     // getting data first by location
@@ -48,6 +49,7 @@ const Home = () => {
                         localStorage.setItem("data", JSON.stringify(res.data));
                         console.log(Output);
                         setLoading(false)
+                        const imgsrc = `http://openweathermap.org/img/wn/${res.data.}@2x.png`
                     })
                     .catch((err) => {
                         console.log(err);
@@ -58,6 +60,17 @@ const Home = () => {
             }, 1000);
         }
     };
+// CHANGING BACKGROUND IF ITS SUNNY OR CLOUDY
+useEffect(() => {
+    const weathher = 30;
+
+if (weathher >= 30) {
+    setsunny(false)
+}
+else{
+    setsunny(true)
+}
+}, [])
 
     // getting time and date
     let date = new Date();
@@ -90,7 +103,7 @@ const Home = () => {
         <>
             {Loading ? 
                 
-                ( <div className="main">
+                ( <div className={sunny ? "main" : "main cloudy"}>
                 <div className="left">
                     <div>
                         <header>the.weather</header>
@@ -184,7 +197,7 @@ const Home = () => {
                             </div>
                             <div className="image">
                                 {/* image */}
-                                {/* <img src={imgsrc} alt="weather image" /> */}
+                                <img src={imgsrc} alt="weather image" />
                                 <p>{response.weather[0].main}</p>
                             </div>
                         </div>
