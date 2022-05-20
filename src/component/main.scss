@@ -25,9 +25,11 @@ input{
     @media screen and(max-width: 600px) {
         width: 75%;
         margin: auto;
+        // height: 55vh;
     }
 }
 .dateCard{
+    position: relative;
     width: 100px;
     height: 60px;
     display: flex;
@@ -37,5 +39,10 @@ input{
     background: rgb(68, 67, 67);
     color: white;
     // padding: 1rem;
+    @media screen and(max-width: 600px) {
+       width: 100%;
+       padding: .4rem .8rem;
+    //    height: 200px;
+    }
 
 }
