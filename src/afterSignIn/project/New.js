@@ -1,3 +1,4 @@
+import { data } from 'autoprefixer'
 import React, { useState } from 'react'
 import Left from '../dashboard/Left'
 import Aboutproject from './Aboutproject'
@@ -6,9 +7,6 @@ const New = () => {
     const [Load, setLoad] = useState(true)
     const getData = function (data) {
         console.log(data);
-        setProjectCreated((prevData) => {
-            return [...prevData, data];
-        });
         console.log(ProjectCreated);
     };
     return (
@@ -19,7 +17,7 @@ const New = () => {
                 <Left />
             </div>
             <div className='center'>
-                <div>New</div>
+                <div>{data.fullname}</div>
                 {/* {ProjectCreated.map((proj)=> {
                     return(
                         <h1 key={proj.id}>{proj.pro}</h1>

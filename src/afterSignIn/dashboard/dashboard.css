@@ -1,0 +1,86 @@
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.dashboard_left {
+  width: 20%;
+  min-height: 100vh;
+  background: #eeeeee;
+}
+
+.dashboard_left .leftIcons {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  position: fixed;
+  margin-left: 5rem;
+}
+
+.center {
+  width: 80% !important;
+}
+
+.center .dashboard_input {
+  background: #eeeeee;
+  padding: 1rem 1.5rem;
+  margin: 2rem;
+}
+
+.center .cardMain {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  -webkit-transform: translate(-10%, -50%);
+          transform: translate(-10%, -50%);
+}
+
+@media screen and (max-width: 900px) {
+  .center .cardMain {
+    position: relative;
+    top: 30%;
+  }
+}
+
+.center .cardMain .centerCards {
+  width: 250px;
+  height: 100px;
+  text-align: center;
+}
+
+.savingCardBottom {
+  position: relative;
+  width: 50%;
+  height: 35vh;
+  margin: 2rem;
+}
+
+@media screen and (max-width: 780px) {
+  .savingCardBottom {
+    width: 80vw;
+    height: 20vh;
+    margin: 2rem auto;
+  }
+}
+
+textarea {
+  height: 20vh !important;
+  outline: 0;
+}
+
+form h1 {
+  margin-left: 2rem;
+}
+
+form div {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  form div {
+    margin-top: 1rem;
+  }
+}
+/*# sourceMappingURL=dashboard.css.map */

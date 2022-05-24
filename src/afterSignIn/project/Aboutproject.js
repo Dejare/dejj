@@ -3,12 +3,12 @@ import { useHistory } from "react-router-dom";
 import Left from "../dashboard/Left";
 import {HiMenuAlt3} from 'react-icons/hi'
 
-const Aboutproject = (props, { display }) => {
+const Aboutproject = (props, { display, visibility }) => {
     const history = useHistory();
     function handleSubmit(e) {
         e.preventDefault();
-      history.push("/new")
-        const data = {
+      history.push("/test")
+      const data = [{
             fullname: fullname,
             location: location,
             Projectname: Projectname,
@@ -16,9 +16,10 @@ const Aboutproject = (props, { display }) => {
             skills: skills,
             about: about,
             // display: display
-        };
+     } ];
         props.onAddData(data);
         formData.current.style.display = `${display}`;
+        console.log(data)
     }
     const [Projectname, setProjectname] = useState("");
     const [fullname, setfullname] = useState("");
@@ -29,12 +30,12 @@ const Aboutproject = (props, { display }) => {
     // console.log(Projectname);
     const formData = useRef();
     return (
-        <div className="dashboard flex flex-row">
+        <div className="dashboard flex flex-row" style={{visibility: `${visibility}`}}>
             <div className="dashboard_left bg-blue-600 md:flex hidden flex-col">
                 <Left />
             </div>
             <div className="center">
-            <header className="text-blue-600 p-12 flex flex-row justify-between w-screen">
+            <header className="text-blue-600 p-12 flex flex-row justify-between">
                 <div>
                     Yoursite!
                 </div>

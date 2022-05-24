@@ -19,11 +19,11 @@ const Center = () => {
         <div className='flex flex-row m-12'>
             <AiOutlineBell className='mr-8 text-3xl text-gray-600'/>
             <AiOutlineSetting className='mr-8 text-3xl text-gray-600'/>
-            <h1 className='mr-8 text-3xl text-gray-600'>{user.email}</h1>
+            <h1 className='mr-8 text-3xl text-gray-600'>profile</h1>
         </div>
     </div>
     <div className='md:m-12 md:mt-52 mt-12 m-4'>
-        <h1 className='text-5xl coolvetica m-12'>Welcome <br /> <span className='coolvetica'>{user.email}</span></h1>
+        <h1 className='text-5xl coolvetica m-12'>Welcome <br /> <span className='coolvetica'></span></h1>
         <h1 className='m-12 text-5xl coolvetica text-blue-600'>Ready to create an online presence?</h1>
         <button className='cta rounded-xl text-white bg-blue-600 ml-12' onClick={newProject}>New Project &rarr;</button>
     </div>

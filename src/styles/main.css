@@ -1,0 +1,252 @@
+@font-face {
+  font-family: 'Calibre-Medium';
+  src: url("../font/Calibre-Medium.woff") format("woff"), url("../font/Calibre-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Coolvetica";
+  src: url("../font/coolvetica rg.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "cool";
+  src: url("../font/coolvetica crammed rg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mark Pro';
+  src: url("../font/MarkPro-Heavy.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Circular Std";
+  src: url("../font/CircularStd-Book.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Calibre-Regular';
+  src: url("../font/Calibre-Regular.woff") format("woff"), url("../font/Calibre-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*--------------------------
+    variables
+---------------------------*/
+.style {
+  font-family: "Mark Pro";
+  font-weight: 500;
+}
+
+.circular {
+  font-family: "Circular Std" !important;
+}
+
+/*--------------------------
+    base settings
+---------------------------*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input {
+  outline: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Calibre-Regular", sans-serif;
+  font-size: 1.7rem;
+  color: black;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr (minmax(min-content, 10rem))[12] 1fr;
+      grid-template-columns: 1fr repeat(12, minmax(-webkit-min-content, 10rem)) 1fr;
+      grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem)) 1fr;
+}
+
+section {
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  will-change: transform;
+}
+
+.cursor {
+  width: 2rem;
+  height: 2rem;
+  border: 2.5px solid #eeeeee;
+  border-radius: 50%;
+  position: absolute;
+  top: -10rem;
+  left: -10rem;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-transition-property: background, -webkit-transform;
+  transition-property: background, -webkit-transform;
+  transition-property: background, transform;
+  transition-property: background, transform, -webkit-transform;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .cursor {
+    opacity: 0;
+  }
+}
+
+/*--------------------------
+    typography
+---------------------------*/
+.heading-2 {
+  font-family: "Mark Pro";
+  letter-spacing: -1px;
+  text-transform: capitalize;
+  margin-left: 3rem;
+  background: linear-gradient(-45deg, #6bc5f8, #cf59e6, #6bc5f8, #cf59e6);
+  margin: 1rem 3rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  -webkit-animation: gradient 3s ease infinite;
+          animation: gradient 3s ease infinite;
+}
+
+.heading-3 {
+  font-size: 4rem;
+  text-transform: capitalize;
+  letter-spacing: -.5px;
+  line-height: 4rem;
+  font-family: "Calibre-Medium", sans-serif;
+}
+
+.section-head {
+  margin-left: 3rem;
+  margin-top: 6rem;
+}
+
+.heading-4 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.heading-5 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #eeeeee;
+}
+
+.paragraph {
+  margin-left: 3rem;
+  font-size: 1.5rem;
+  color: #797575;
+}
+
+/*--------------------------
+    button
+---------------------------*/
+.cta {
+  padding: 1.5rem 4rem;
+  text-decoration: none;
+  color: #eeeeee;
+  border-radius: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: "Calibre-Regular", sans-serif;
+  letter-spacing: 3px;
+  border: 1.5px solid #eeeeee;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.cta:hover {
+  background: linear-gradient(-45deg, #eeeeee, white);
+  border: 1.5px solid #eeeeee;
+  color: #000000;
+}
+
+/*--------------------------
+    utilities
+---------------------------*/
+.pri-color {
+  color: #09F755;
+}
+
+.sec-color {
+  color: #797575;
+}
+
+.mb-l {
+  margin-bottom: 5rem;
+}
+
+.mb-m {
+  margin-bottom: 3rem;
+}
+
+.mb-s {
+  margin-bottom: 1.3rem;
+}
+
+.mt-s {
+  margin-top: 1rem;
+}
+
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  position: relative;
+  color: #eeeeee;
+}
+
+.secondary-font {
+  font-family: "Calibre-SemiBold", sans-serif;
+}
+
+.coolvetica {
+  font-family: "Coolvetica";
+}
+/*# sourceMappingURL=main.css.map */
