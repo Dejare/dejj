@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { useState } from "react";
 import "./styles/main.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -75,17 +75,7 @@ function App() {
             </BrowserRouter>
         </AuthContextProvider>
     );
-=======
-import React from 'react'
-import Home from './component/Home'
 
-function App() {
-  return (
-    <><div>
-      <Home />
-      </div></>
-  )
->>>>>>> eef2f39cd4ae236a88c70b5e611d7e90ffdd981b
 }
 
 export default App
