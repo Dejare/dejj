@@ -4,11 +4,10 @@ import Aboutproject from "../../afterSignIn/project/Aboutproject";
 import "./template.css";
 import { FormContext } from "../../context/FormContext";
 
-const Index = ({ logo, occupation, catchy }) => {
+const Index = () => {
     
     const formValue = useContext(FormContext)
-   const v = localStorage.getItem(JSON.parse("payment"))
-console.log(v)
+    
     return (
         <>
         <div className="template">
@@ -36,7 +35,7 @@ console.log(v)
                 </h1>{" "}
                 <div className="homeCta">
                     {" "}
-                    <a href="./pages/about.html" className="homeAbout">
+                    <a href="#about" className="homeAbout">
                         About Me
                     </a>{" "}
                     -{" "}
@@ -46,6 +45,14 @@ console.log(v)
                 </div>{" "}
                 -{" "}
             </div>
+
+
+            <section id="about">
+                <div id="aboutsect">
+                        <h1>About me -</h1>
+                        
+                </div>
+            </section>
         </div>
 
         </>

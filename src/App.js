@@ -29,6 +29,8 @@ function App() {
    }
 
    console.log(Dataa)
+
+   const lsdata = JSON.parse(localStorage.getItem("project"))
    
     return (
         <AuthContextProvider>
@@ -56,7 +58,7 @@ function App() {
                         </Route>
 
 
-                        <FormContext.Provider value={Dataa}>
+                        <FormContext.Provider value={lsdata}>
                         <Route path="/newtransfer">
                             <Aboutproject onAddData={addData}/>
                         </Route>

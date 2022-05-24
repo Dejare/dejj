@@ -1,17 +1,19 @@
 @font-face {
     font-family: "Coolvetica";
-    src: url("../../font/coolvetica\ rg.ttf") format("truetype");
+    src: url("../../font/coolvetica\rg.ttf") format("truetype");
     font-weight: normal;
 }
 
 .template {
     max-width: 100vw !important;
-    min-height: 120vh;
+    // min-height: 120vh;
+    position: relative;
     background: #000;
     color: white !important;
 }
 
 .homeTexts {
+    height: 100vh;
     position: absolute;
     top: 30%;
     text-align: left;
@@ -231,3 +233,6 @@ square {
         transform: translateY(-30px);
     }
 }
+
+
+// ABOUT
