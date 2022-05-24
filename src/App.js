@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import "./styles/main.scss";
+import "./styles/main.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./beforeLogin/Home";
 import Verify from "./auth/Verify";
