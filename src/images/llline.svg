@@ -1,0 +1,16 @@
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" {...props}>
+    <path
+      d="M115.247 121.973c12.855 14.35 30.792 87.892 77.13 86.099 46.337-1.794 150.074-93.722 200.897-96.861 50.822-3.14 86.696 65.022 104.035 78.027"
+      fill="none"
+      strokeWidth={6}
+      stroke='url("#a")'
+      strokeLinecap="round"
+      transform="matrix(.69834 0 0 .69834 186.115 88.542)"
+    />
+    <defs>
+      <linearGradient id="a" gradientTransform="rotate(2 .5 .5)">
+        <stop stopColor="hsl(184, 74%, 44%)" offset={0} />
+        <stop stopColor="hsl(332, 87%, 70%)" offset={1} />
+      </linearGradient>
+    </defs>
+  </svg>
